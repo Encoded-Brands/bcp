@@ -7,7 +7,7 @@ parent: /.well-known/brand.md
 
 # Voice
 
-Encoded sounds like a world-class design studio (think Pentagram, Collins, or Red Antler) applying its discipline to AI infrastructure. The voice is elegant, optimistic, confident, and restrained. We translate complex technical realities into clear, design-forward concepts. We are the calm experts offering a real solution to brand fidelity, entirely avoiding the doom-laden or hyper-caffeinated tone typical of tech startups.
+Encoded sounds like a world-class design studio (think Pentagram, Collins, or Instrument) applying its discipline to AI infrastructure. The voice is elegant, optimistic, confident, and restrained. We translate complex technical realities into clear, design-forward concepts. We are the calm experts offering a real solution to brand fidelity, entirely avoiding the doom-laden or hyper-caffeinated tone typical of tech startups.
 
 ```yaml
 prefer_vocabulary:

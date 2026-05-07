@@ -1,23 +1,27 @@
 ---
 bcp_version: "0.1"
 file_type: values
-last_updated: 2026-05-06
+last_updated: 2026-05-07
 parent: /.well-known/brand.md
 ---
 
 # Values
 
 1. **High fidelity first.**
-Ship what we can encode well today, such as voice, claims, hex values, and fonts. Do not over-promise on what we cannot yet deliver. 
-*Manifestation in practice:* We will actively refuse to launch a "magical" feature if it relies on hallucination or cannot reliably map back to the brand's truth.
+   Ship only what we can encode reliably: voice, claims, hex values, fonts, named entities, boundaries. Refuse anything that depends on hallucination.
+   *Illustrative test:* If a partner asks for "auto-generate brand voice from a logo," we decline. We do not generate a voice the brand has not written.
 
 2. **The Skeleton Key principle.**
-We build for interoperability. The platforms (Meta, Canva, Shopify) are our allies. We provide a tiered schema so their tools can draw meaning easily, pulling only the context they need without choking on a massive file.
-*Manifestation in practice:* Designing nested daughter and granddaughter files so a podcast generation tool can fetch only `voice.md` and ignore `visual.md`.
+   One schema, many tools. Any platform pulls the smallest piece of context it needs — one daughter file, one granddaughter file — without parsing the rest. Platforms are allies.
+   *In practice:* A podcast tool reads voice.md alone. A design tool reads identity.md alone. Neither hosts the whole BCP to use part of it.
 
 3. **Not precious.**
-Adopt what works rather than reinventing the wheel. We are designing for agents first, not humans using AI tools.
-*Manifestation in practice:* Integrating third-party solutions, like Zefr classifiers for video content, rather than building proprietary classifiers from scratch.
+   The agent is the user. Adopt what works and don't reinvent for purity. Markdown because it parses everywhere; existing transports rather than new ones.
+   *In practice:* We use third-party classifiers for video brand-suitability rather than building our own.
 
-## Agent Resolution Note
-When values conflict, prioritize in this order: [1], [2], [3]. If a platform integration (Value 2) requires degrading the strictness of the schema (Value 1), High Fidelity First wins. We supply the exact schema; the platform chooses what to consume.
+## Resolution
+
+When values conflict: [1] > [2] > [3].
+- Fidelity beats integration. Ship the strict schema; the platform decides what to consume.
+- Fidelity beats adoption. If an existing standard would degrade fidelity, fork or wrap.
+- Integration beats preciousness. If our own design blocks a platform, drop the design.
